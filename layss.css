@@ -1,7 +1,7 @@
 /* flex containers */
 
 .row,
-.column,
+.col,
 .centered,
 .middle,
 .box {
@@ -12,7 +12,7 @@
 	flex-direction: row;
 }
 
-.column {
+.col {
 	flex-direction: column;
 }
 
