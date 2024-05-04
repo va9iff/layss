@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>layss</title>
+	<link rel="stylesheet" href="./layss.css">
+</head>
+<body>
+	<style>
+		.test {
+			margin: 30px;
+			background-color: #2228;
+			resize: both;
+			overflow: auto;
+
+		}
+		.test::before{
+			content: attr(class);
+		}
+		div {
+			margin: 10px;
+		}
+		.test * {
+			background-color: #8fa;
+			border: 5px solid #fafa77;
+		}
+		.a {
+			padding: 20px 30px;
+		}
+		.b {
+			padding: 20px 20px;
+		}
+		.c {
+			padding: 35px 15px
+		}
+	</style>
+	<div class="col centered">
+		
+		<div class="col test">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="col centered test">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="col middle test">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="col box test">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="row test">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>		
+		</div>
+		<div class="row centered test">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="row middle test">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="row box test">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="test col box scroll-y" style="width: 80px; height: 200px;">
+			<button class="a" onclick="this.remove()">click to remove</button>
+			<button class="a" onclick="this.remove()">click to remove</button>
+			<button class="a" onclick="this.remove()">click to remove</button>
+			<button class="a" onclick="this.remove()">click to remove</button>
+			<button class="a" onclick="this.remove()">click to remove</button>
+			<button class="a" onclick="this.remove()">click to remove</button>
+			
+		</div>
+	</div>
+
+</body>
+</html>

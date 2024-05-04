@@ -1,10 +1,7 @@
 /* flex containers */
 
 .row,
-.col,
-.centered,
-.middle,
-.box {
+.col {
 	display: flex;
 }
 
@@ -18,28 +15,34 @@
 
 /* alignment */
 
-.align-center,
-.centered,
-.box {
+.align-center, .centered {
 	align-items: center;
 }
-
-.middle,
-.box {
+.justify-center, .middle {
 	justify-content: center;
 }
 
 .align-start {
 	align-items: flex-start;
 }
+.justify-start {
+	align-items: flex-start;
+}
 
 .align-end {
 	align-items: flex-end;
 }
-
-.align-stretch {
-	align-items: stretch;
+.justify-end {
+	align-items: flex-end;
 }
+
+.justify-around {
+	justify-content: space-around;
+}
+.justify-between {
+	justify-content: space-between;
+}
+
 
 
 /* scrolls */
@@ -84,41 +87,28 @@
 
 /* children of flex */
 
-.fill {
+.grow {
 	flex-grow: 1;
-	align-self: stretch;
-}
-
-.self-stretch {
-	align-self: stretch;
-}
-
-.self-center {
-	align-self: center;
-}
-
-.self-start {
-	align-self: flex-start;
-}
-
-.self-end {
-	align-self: flex-end;
 }
 
 /* move to end/start */
 
+.snap-center,
 .snap-left {
 	margin-right: auto;
 }
 
+.snap-center,
 .snap-right {
 	margin-left: auto;
 }
 
+.snap-center,
 .snap-top {
 	margin-bottom: auto;
 }
 
+.snap-center,
 .snap-bottom {
 	margin-top: auto;
 }
@@ -127,4 +117,33 @@
 
 .wrap {
 	flex-wrap: wrap;
+}
+
+
+/* center a div in a way that its justify overflow is after (so it's scrollable if wanted) */
+
+.col.box > *:first-child {
+	margin-top: auto;
+	background-color: red;
+}
+.col.box > *:last-child {
+	background-color: blue;
+	margin-bottom: auto;
+}
+.col.box > * {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row.box > *:first-child {
+	margin-left: auto;
+	background-color: red;
+}
+.row.box > *:last-child {
+	background-color: blue;
+	margin-right: auto;
+}
+.row.box > * {
+	margin-top: auto;
+	margin-bottom: auto;
 }
